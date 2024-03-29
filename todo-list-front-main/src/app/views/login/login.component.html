@@ -1,0 +1,56 @@
+<main>
+  <section class="h-100 gradient-form" style="background-color: #eee;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-10">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0">
+                <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                    <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                      <h4 class="mb-4">Login to your TodoList account ➔ </h4>
+                    </div>
+                  </div>
+              <div class="col-lg-6">
+                <div class="card-body p-md-5 mx-md-4">
+
+                  <div class="text-center">
+
+                    <h4 class="mt-1 mb-5 pb-1">Login</h4>
+                  </div>
+
+                  <form #f="ngForm" (ngSubmit)="submitLogin(f)">
+                    <div class="form-outline mb-4">
+                      <input type="email" name="email" id="email" class="form-control"
+                        placeholder="Email" ngModel>
+                    </div>
+                    <div class="form-outline mb-4">
+                      <input type="password" id="password" name="password" class="form-control" placeholder="Password" ngModel>
+                    </div>
+                    <div class="form-outline mb-4">
+                      <button type="submit" class="btn btn-outline-danger">Sign in</button>
+                    </div>
+
+
+                  </form>
+
+
+                    <p>Please login to your account</p>
+
+
+                    <div class="d-flex align-items-center justify-content-center pb-4">
+                      <p class="mb-0 me-2">Don't have an account?</p>
+                      <a href="/register">
+                        <button type="button" class="btn btn-outline-secondary">Create one</button>
+                      </a>
+                    </div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

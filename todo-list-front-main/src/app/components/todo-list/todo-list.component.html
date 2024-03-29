@@ -1,0 +1,21 @@
+<div class="card mt-4" style="width: 20rem;">
+  <div class="container">
+    <h1 *ngIf="todo.title">{{ todo.title }}</h1>
+    <p [innerText]="todo.content"></p>
+    <label *ngIf="todo.completionDate">Due date:</label>
+    <input
+      *ngIf="todo.completionDate"
+      type="datetime"
+      name="completionDate"
+      id="completionDate"
+      [value]="todo.completionDate"
+      disabled
+    />
+    <ul *ngIf="todo.assigned?.length">
+      <li *ngFor="let assigned of todo.assigned">
+        {{ assigned.first_name }} {{ assigned.last_name }}
+      </li>
+    </ul>
+  </div>
+  <button class="btn btn-danger" (click)="deleteTodo(todo._id)">Delete</button>
+</div>

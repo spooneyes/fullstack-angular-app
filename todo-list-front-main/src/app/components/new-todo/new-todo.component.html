@@ -1,0 +1,51 @@
+<section>
+  <div class="card mt-4" style="width: 20rem;">
+    <div class="container mt-2 mb-2"><h3>Add a Todo</h3></div>
+
+    <div class="card-body">
+      <div class="d-flex flex-row align-items-center">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+          <div class="form-outline mb-4">
+            <input
+              class="form-control"
+              type="text"
+              name="title"
+              id="title"
+              placeholder="Title"
+              ngModel
+            />
+          </div>
+          <div class="form-outline mb-4">
+            <textarea
+              class="form-control"
+              name="content"
+              placeholder="Add a Todo"
+              ngModel
+            ></textarea>
+          </div>
+          <div class="form-outline mb-4">
+            <input
+              class="form-control"
+              type="datetime-local"
+              name="completionDate"
+              ngModel
+            />
+          </div>
+          <div class="form-outline mb-4">
+            <input
+              class="form-control"
+              type="text"
+              name="assignedTo"
+              id="assignedTo"
+              placeholder="Assign to someone"
+              ngModel
+            />
+          </div>
+          <div class="contols-container">
+            <button type="submit" class="btn btn-primary">Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

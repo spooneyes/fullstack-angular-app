@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+<main>
+  <app-hello></app-hello>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <app-new-todo></app-new-todo>
+      </div>
+      <div class="col">
+        <div class="container mt-4">
+          <h3>Your notes</h3>
+          <app-todo-list
+            *ngFor="let todo of todos; trackBy: findTodoId"
+            [todo]="todo"
+          ></app-todo-list>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
