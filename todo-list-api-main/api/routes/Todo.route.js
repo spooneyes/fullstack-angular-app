@@ -4,6 +4,10 @@ const { Todo } = require('../model');
 const router = express.Router();
 
 router.post('/', auth, async (req, res) => {
+     if (Object.keys(req.body).length === 0) {
+        return res.status(400).send('Request body cannot be empty');
+    }
+    
     try {
         await Todo.create({
             creator: req.ctx.user_id,
